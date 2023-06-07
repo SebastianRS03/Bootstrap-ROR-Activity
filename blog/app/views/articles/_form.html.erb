@@ -1,0 +1,23 @@
+<section class = "d-flex justify-content-center border-4 border border-primary w-25">
+<%= form_with model: article do |form| %>
+  <div class="p-3 mb-2 bg-white text-black">
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% article.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class = "p-3 mb-2 bg-white text-black">
+    <%= form.label :body %><br>
+    <%= form.text_area :body %><br>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="p-3 mb-2 bg-white text-black">
+    <%= form.submit %>
+  </div>
+<% end %>
+</section>

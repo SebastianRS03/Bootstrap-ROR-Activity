@@ -1,0 +1,13 @@
+<section class = "border-4 border border-primary">
+    <h1 class = "p-3 mb-2 bg-white text-black d-flex justify-content-center">Articles#index</h1>
+    <p class = "p-3 mb-2 bg-white text-black d-flex justify-content-center">Find me in app/views/articles/index.html.erb</p>
+
+    <h2 class = "p-3 mb-2 bg-white text-black d-flex justify-content-center">Ruby Project</h2>
+    <ul>
+        <% @articles.each do |article| %>
+        <li class = "p-3 mb-2 bg-white text-black d-flex justify-content-center">
+            <a href="/articles/<%= article.id %>"><%= article.title%></a>
+        </li>
+        <% end %>
+    </ul>
+</section>
